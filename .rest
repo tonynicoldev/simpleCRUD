@@ -1,0 +1,30 @@
+
+### Get all results
+GET http://localhost:3000/results
+
+### Create a new record
+POST http://localhost:3000/results
+content-type: application/json
+
+# needs a blank line between content and body
+{
+"id": 20,
+"fName": "Tony",
+"lName": "Nicol",
+"score": 39
+}
+
+### Or using url-encoding
+POST http://localhost:3000/results
+content-type: application/x-www-form-urlencoded
+
+id=30&fName=Jimmy&lName=Riddle&score=3
+
+### Get a specified user. Last name. Case sensitive
+GET http://localhost:3000/results/name?lName=Jet
+
+### Delete user 20
+DELETE http://localhost:3000/results/20
+
+### Update lName of specified user by ID
+PATCH http://localhost:3000/results/2/Malony
